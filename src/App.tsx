@@ -26,9 +26,11 @@ import { DocumentsPage } from './pages/documents/DocumentsPage';
 import { SettingsPage } from './pages/settings/SettingsPage';
 import { HelpPage } from './pages/help/HelpPage';
 import { DealsPage } from './pages/deals/DealsPage';
+// import {CalendarUI} from './components/calender/Calender'
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
+import CalendarUI from './pages/calender/CalendarPage';
 
 function App() {
   return (
@@ -71,6 +73,8 @@ function App() {
           <Route path="/documents" element={<DashboardLayout />}>
             <Route index element={<DocumentsPage />} />
           </Route>
+
+          
           
           <Route path="/settings" element={<DashboardLayout />}>
             <Route index element={<SettingsPage />} />
@@ -84,6 +88,10 @@ function App() {
             <Route index element={<DealsPage />} />
           </Route>
           
+          <Route path="/calendar" element={<DashboardLayout />}>
+            <Route index element={<CalendarUI />} />
+          </Route>
+
           {/* Chat Routes */}
           <Route path="/chat" element={<DashboardLayout />}>
             <Route index element={<ChatPage />} />

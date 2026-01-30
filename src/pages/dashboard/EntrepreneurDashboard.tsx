@@ -169,6 +169,7 @@ export const EntrepreneurDashboard: React.FC = () => {
           </Card>
         </div>
       </div>
+      
     </div>
   );
 };

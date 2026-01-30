@@ -5,6 +5,7 @@ import {
   Home, Building2, CircleDollarSign, Users, MessageCircle, 
   Bell, FileText, Settings, HelpCircle
 } from 'lucide-react';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 
 interface SidebarItemProps {
   to: string;
@@ -43,6 +44,7 @@ export const Sidebar: React.FC = () => {
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
     { to: '/documents', icon: <FileText size={20} />, text: 'Documents' },
+    { to: '/calendar', icon: <CalendarTodayIcon/>, text: 'Calendar' },
   ];
   
   const investorItems = [
@@ -52,6 +54,7 @@ export const Sidebar: React.FC = () => {
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
     { to: '/deals', icon: <FileText size={20} />, text: 'Deals' },
+    { to: '/calendar', icon: <CalendarTodayIcon/>, text: 'Calendar' },
   ];
   
   const sidebarItems = user.role === 'entrepreneur' ? entrepreneurItems : investorItems;
