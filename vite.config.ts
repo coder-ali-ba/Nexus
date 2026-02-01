@@ -7,5 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],   
   },
-  base :"https://nexus-iota-five.vercel.app/login"
+  base :"/login"
 });
