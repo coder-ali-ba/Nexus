@@ -1,4 +1,4 @@
 {
-    "rewrites": [{ "source": "/nexus/(.*)", "destination": "/login/index.html" }]
+    "rewrites": [{ "source": "/nexus/(.*)", "destination": "/index.html" }]
   }
   
