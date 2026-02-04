@@ -31,6 +31,9 @@ import { DealsPage } from './pages/deals/DealsPage';
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
 import CalendarUI from './pages/calender/CalendarPage';
+// import VideoCall from './pages/VideoCall/VideoCall';
+import VideoCallPage from './pages/VideoCallPage/VideoCallPage';
+import VideoCall from './pages/VideoCall/VideoCall';
 
 function App() {
   return (
@@ -90,6 +93,14 @@ function App() {
           
           <Route path="/calendar" element={<DashboardLayout />}>
             <Route index element={<CalendarUI />} />
+          </Route>
+
+          <Route path='/videocallpage' element={<DashboardLayout />}>
+             <Route index element={<VideoCallPage />}/>
+          </Route>
+
+          <Route path='/videocall' element={<DashboardLayout />}>
+             <Route index element={<VideoCall />} />
           </Route>
 
           {/* Chat Routes */}
