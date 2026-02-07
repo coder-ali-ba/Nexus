@@ -46,6 +46,7 @@ export const Sidebar: React.FC = () => {
     { to: '/documents', icon: <FileText size={20} />, text: 'Documents' },
     { to: '/calendar', icon: <FileText/>, text: 'Calendar' },
     { to: '/videocallpage', icon: <FileText/>, text: 'VideoCall' },
+    { to: '/documentprocess', icon: <FileText/>, text: 'Doc Chamber' },
   ];
   
   const investorItems = [
