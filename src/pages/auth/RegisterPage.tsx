@@ -39,6 +39,17 @@ export const RegisterPage: React.FC = () => {
       setIsLoading(false);
     }
   };
+
+  const getPasswordStrength = (pass: string) => {
+  let score = 0;
+  if (pass.length >= 8) score++;
+  if (/[A-Z]/.test(pass)) score++;
+  if (/[0-9]/.test(pass)) score++;
+  if (/[^A-Za-z0-9]/.test(pass)) score++;
+  return score;
+};
+
+const strength = getPasswordStrength(password);
   
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -142,6 +153,28 @@ export const RegisterPage: React.FC = () => {
               startAdornment={<Lock size={18} />}
             />
             
+            <div className="mt-1">
+  <div className="w-full h-2 bg-gray-200 rounded">
+    <div
+      className={`h-2 rounded transition-all ${
+        strength <= 1
+          ? "w-1/4 bg-red-500"
+          : strength === 2
+          ? "w-2/4 bg-yellow-500"
+          : strength === 3
+          ? "w-3/4 bg-blue-500"
+          : "w-full bg-green-500"
+      }`}
+    />
+  </div>
+
+  <p className="text-xs mt-1 text-gray-500">
+    {strength <= 1 && "Weak password"}
+    {strength === 2 && "Medium password"}
+    {strength >= 3 && "Strong password"}
+  </p>
+</div>
+
             <div className="flex items-center">
               <input
                 id="terms"
@@ -195,3 +228,7 @@ export const RegisterPage: React.FC = () => {
     </div>
   );
 };
+
+
+
+

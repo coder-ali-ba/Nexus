@@ -35,6 +35,7 @@ import CalendarUI from './pages/calender/CalendarPage';
 import VideoCallPage from './pages/VideoCallPage/VideoCallPage';
 import VideoCall from './pages/VideoCall/VideoCall';
 import DocumentChamber from './pages/DocumentsProcess/DocumentsProcess';
+import PaymentSection from './pages/payments/PaymentSection';
 
 function App() {
   return (
@@ -106,6 +107,10 @@ function App() {
 
           <Route path='/documentprocess' element={<DashboardLayout />}>
              <Route index element={<DocumentChamber />} />
+          </Route>
+
+          <Route path='/payments' element={<DashboardLayout />}>
+             <Route index element={<PaymentSection />}/>
           </Route>
 
           {/* Chat Routes */}

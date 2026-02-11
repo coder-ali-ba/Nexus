@@ -14,15 +14,6 @@ const VideoCall = () => {
 
 
 
-//   const toggleMic = () => {
-//   if (!localStream) return;
-
-//   localStream.getAudioTracks().forEach((track) => {
-//     track.enabled = !track.enabled;
-//     setIsMicOn(track.enabled);
-//   });
-// };
-
 
 const toggleMic = () => {
   if (!pc1.current) return;

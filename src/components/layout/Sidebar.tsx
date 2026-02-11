@@ -6,6 +6,11 @@ import {
   Bell, FileText, Settings, HelpCircle
 } from 'lucide-react';
 
+import ScheduleIcon from '@mui/icons-material/Schedule';
+import VideocamIcon from '@mui/icons-material/Videocam';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import PaymentIcon from '@mui/icons-material/Payment';
+
 
 interface SidebarItemProps {
   to: string;
@@ -44,9 +49,10 @@ export const Sidebar: React.FC = () => {
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
     { to: '/documents', icon: <FileText size={20} />, text: 'Documents' },
-    { to: '/calendar', icon: <FileText/>, text: 'Calendar' },
-    { to: '/videocallpage', icon: <FileText/>, text: 'VideoCall' },
-    { to: '/documentprocess', icon: <FileText/>, text: 'Doc Chamber' },
+    { to: '/calendar', icon: <ScheduleIcon/>, text: 'Calendar' },
+    { to: '/videocallpage', icon: <VideocamIcon/>, text: 'VideoCall' },
+    { to: '/documentprocess', icon: <PictureAsPdfIcon/>, text: 'Doc Chamber' },
+    { to: '/payments', icon: <PaymentIcon/>, text: 'Payment Section' },
   ];
   
   const investorItems = [
@@ -56,8 +62,10 @@ export const Sidebar: React.FC = () => {
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
     { to: '/deals', icon: <FileText size={20} />, text: 'Deals' },
-    { to: '/calendar', icon: <FileText/>, text: 'Calendar' },
-    { to: '/videocallpage', icon: <FileText/>, text: 'VideoCall' },
+    { to: '/calendar', icon: <ScheduleIcon/>, text: 'Calendar' },
+    { to: '/videocallpage', icon: <VideocamIcon/>, text: 'VideoCall' },
+    { to: '/documentprocess', icon: <PictureAsPdfIcon/>, text: 'Doc Chamber' },
+    { to: '/payments', icon: <PaymentIcon/>, text: 'Payment Section' },
   ];
   
   const sidebarItems = user.role === 'entrepreneur' ? entrepreneurItems : investorItems;
