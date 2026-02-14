@@ -289,3 +289,6 @@ export const LoginPage: React.FC = () => {
     </div>
   );
 };
+
+
+ // { "source": "/login/(.*)", "destination": "/login/index.html" }
